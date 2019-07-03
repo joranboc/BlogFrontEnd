@@ -1,0 +1,47 @@
+<nav class="navbar navbar-dark bg-primary">
+  <span class="navbar-brand mb-0 h1">Autores</span>
+</nav>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Nacionalidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let author of authors; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        {{ author.name }}
+      </td>
+      <td>{{ author.age | number }}</td>
+      <td>{{ author.nationality }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- 
+<ul>
+  <li *ngFor="let author of authors">
+    <div>
+      <span> Nombre: </span>{{author.name | titlecase }}
+    </div>
+
+    <div>
+      <span>Nacionalidad: </span>{{author.nationality}}
+    </div>
+    <div>
+      <span>Edad: </span>{{author.age}}
+    </div>
+  </li>
+</ul> -->
+
+<!-- <div>
+<label>
+    Nombre:
+      <input [(ngModel)]="author.name" placeholder="name" />
+  </label>
+
+</div> -->
